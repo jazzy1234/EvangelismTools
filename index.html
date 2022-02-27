@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+      <style>
+         img{
+            height: 500px;
+            width: 450px;
+         }
+         h1{
+            color: rgb(14, 9, 58);
+            margin-top: 20px;
+            font-family: Comic Sans MS, cursive, sans-serif;
+         }
+         h3, h4{
+            color: rgb(14, 9, 58);
+            margin-top: 20px;
+            font-family: Comic Sans MS, cursive, sans-serif;
+         }
+         .button{
+            margin-left: 44%;
+            margin-top: 10px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+               <h1 id="message">Solving The God Puzzle</h1>
+               <img id="myImage"/>
+            </div>
+            <div class="col-md-3"></div>
+         </div>
+      </div>
+      <div class="button">
+         <button class="btn btn-warning" onclick='changeImage(-1)'>previous</button>
+         <button class="btn btn-warning" onclick='changeImage(1)' class='galleryButons'>next</button>
+         <div id='myImage'></div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+               <h4 id="message">Church Info Below. For The Church Website, <br>
+                  Click <a href="https://www.graceefca.org" target="_blank">Here</a></h4>
+               <img src="Grace_Fellowship_Church_card.png"/>
+            </div>
+            <div class="col-md-3"></div>
+         </div>
+      </div>
+
+   </body>
+   <script>
+      var images = ["Solving-the-God-Puzzle_cover.png.png","Solving-the-God-Puzzle_pg3.png.png","Solving-the-God-Puzzle_pg4.png.png",
+      "Solving-the-God-Puzzle_pg5.png.png","Solving-the-God-Puzzle_pg6.png.png","Solving-the-God-Puzzle_pg7.png.png",
+      "Solving-the-God-Puzzle_pg8.png.png","Solving-the-God-Puzzle_pg9.png.png","Solving-the-God-Puzzle_pg10.png.png",
+      "Solving-the-God-Puzzle_pg11.png.png","Solving-the-God-Puzzle_pg12.png.png", "Solving-the-God-Puzzle_pg13.png.png",
+      "Solving-the-God-Puzzle_pg14.png.png","Solving-the-God-Puzzle_pg15.png.png","Solving-the-God-Puzzle_pg16.png.png",
+      "Solving-the-God-Puzzle_pg17.png.png","Solving-the-God-Puzzle_pg18.png.png","Solving-the-God-Puzzle_pg19.png.png",
+      "Solving-the-God-Puzzle_pg20.png.png","Solving-the-God-Puzzle_pg21.png.png","Solving-the-God-Puzzle_pg22.png.png",
+      "Solving-the-God-Puzzle_pg23.png.png","Solving-the-God-Puzzle_pg24.png.png","Solving-the-God-Puzzle_pg25.png.png",
+      "Solving-the-God-Puzzle_pg26.png.png","Solving-the-God-Puzzle_pg27.png.png","Solving-the-God-Puzzle_pg28.png.png",
+      "Solving-the-God-Puzzle_pg29.png.png","Solving-the-God-Puzzle_pg30.png.png","Solving-the-God-Puzzle_pg31.png.png",
+      "Solving-the-God-Puzzle_pg32.png.png","Solving-the-God-Puzzle_pg33.png.png","Solving-the-God-Puzzle_pg34.png.png",
+      "Solving-the-God-Puzzle_pg35.png.png","Solving-the-God-Puzzle_pg36.png.png","Solving-the-God-Puzzle_pg37.png.png",
+      "Solving-the-God-Puzzle_pg38.png.png","Solving-the-God-Puzzle_pg39.png.png","Solving-the-God-Puzzle_pg40.png.png",
+      "Solving-the-God-Puzzle_pg41.png.png","Solving-the-God-Puzzle_pg42.png.png","Solving-the-God-Puzzle_pg43.png.png",
+      "Solving-the-God-Puzzle_pg44.png.png","Solving-the-God-Puzzle_pg45.png.png","Solving-the-God-Puzzle_pg46.png.png",
+      "Solving-the-God-Puzzle_pg47.png.png","Solving-the-God-Puzzle_pg48.png.png"];
+      var counter = 0
+      var gallery = document.getElementById("myImage");
+      gallery.src = images[counter]
+      function changeImage(p) {
+         var gallery = document.getElementById("myImage");
+         counter = p + counter;
+         counter = Math.max(counter,0);
+         counter = Math.min(counter,images.length - 1);
+         gallery.src = images[counter];
+     };
+   </script>
+</html>
